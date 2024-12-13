@@ -1,0 +1,93 @@
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/sub-dep.css') }}"> -->
+<style>
+  .contact p span {
+    color: var(--green) !important;
+  }
+
+  .home .image img {
+    width: 75% !important;
+    height: 69vh !important;
+  }
+  .contact .heading{
+    text-transform: none;
+  }
+  .contact .heading span{
+    text-transform: none;
+  }
+</style>
+{% extends "layout.html" %}
+{% block body %}
+
+<section id="home" class="home">
+  <div class="image">
+    <img src="{{ url_for('static', filename='image/doctor2 mini.png') }}">
+    <!-- <img src="{{ url_for('static', filename='image/home.png') }}"> -->
+  </div>
+  <div class="contact">
+    <h1 class="heading"><span>Dr</span> NaseemHayat </h1>
+    <h3>head of the department</h3>
+    <p><span>a message from the head of cardiology department </span>"Welcome to Cardiology at <strong>madicare network</strong>,
+      I lead our expert cardiology team, dedicated to your heart health. We're here to provide personalized care, 
+      whether for prevention, management, or specialized treatment.
+      If you have questions, please reach out. Your heart is our priority.</p>
+    <a onclick="toggleComplaintSuggestion()" href="{{ url_for('contact') }}" class="btn">complaint and suggestion<span
+        class="fas fa-chevron-right"></span></a>
+    <!-- <button onclick="toggleComplaintSuggestion()">Show Complaint/Suggestion</button> -->
+
+  </div>
+
+</section>
+
+<section class="doctor" id="doctor">
+  <h1 class="heading">expert<span>doctor's</span></h1>
+  <div class="box-container">
+    <div class="box">
+      <img src="{{ url_for('static', filename='image/doctor3.png') }}">
+      <h3><span>Dr </span>Zeena Shah</h3>
+      <h4>Specialization:<span>  Cardiology</span></h4>
+      <p>Dr. zareen shah is a highly experienced cardiologist known for her expertise in diagnosing and treating various heart 
+        conditions. With over 20 years of practice, she has successfully 
+        helped numerous patients lead healthier lives by providing top-notch cardiac care.</p><br>
+      <a href="{{ url_for('booking') }}" class="btn">click appointment<span class="fas fa-chevron-right"></span></a>
+    </div>
+
+    <div class="box">
+      <img src="{{ url_for('static', filename='image/doctor1.png') }}">
+      <h3><span>Dr </span>hareen</h3>
+      <h4>Specialization:<span>  Interventional Cardiology</span></h4>
+      <p>dr haree is a skilled interventional cardiologist recognized for his exceptional ability to perform minimally
+         invasive procedures to treat heart conditions. 
+        He has a remarkable track record of assisting patients with complex cardiac issues.</p><br>
+      <a href="{{ url_for('booking') }}" class="btn">click appointment<span class="fas fa-chevron-right"></span></a>
+    </div>
+
+    <div class="box">
+      <img src="{{ url_for('static', filename='image/doctor6.png') }}">
+      <h3><span>Dr </span>arham</h3>
+      <h4>Specialization:<span>  Pediatric Cardiology</span></h4>
+      
+      <p>dr arham  is a compassionate pediatric cardiologist dedicated to the well-being of young patients
+         with congenital or acquired heart disorders. Her caring 
+        and patient-centered approach make her a trusted choice for children and their families.</p><br>
+     <a href="{{ url_for('booking') }}" class="btn">click appointment<span class="fas fa-chevron-right"></span></a>
+    </div>
+
+    <div class="box">
+      <img src="{{ url_for('static', filename='image/doctor8.png') }}">
+      <h3><span>Dr </span>sahil</h3>
+      <h4>Specialization:<span>  Electrophysiology</span></h4>
+      <p>dr sahil  specializes in electrophysiology, focusing on the diagnosis and treatment of heart rhythm disorders. 
+        With his advanced knowledge of cardiac arrhythmias,
+         he has helped countless patients regain a normal heart rhythm. </p>
+      <a href="{{ url_for('booking') }}" class="btn">click appointment<span class="fas fa-chevron-right"></span></a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}

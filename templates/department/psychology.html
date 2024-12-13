@@ -1,0 +1,97 @@
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/sub-dep.css') }}"> -->
+<style>
+    .contact p span {
+        color: var(--green) !important;
+    }
+
+    .home .image img {
+        width: 75% !important;
+        height: 69vh !important;
+    }
+</style>
+{% extends "layout.html" %}
+{% block body %}
+
+<section id="home" class="home">
+    <div class="image">
+        <img src="{{ url_for('static', filename='image/doctor19.png') }}">
+        <!-- <img src="{{ url_for('static', filename='image/home.png') }}"> -->
+    </div>
+    <div class="contact">
+        <h1 class="heading"><span>Dr</span> sumaira khan</h1>
+        <h3>head of the department</h3>
+        <p><span>a message from the head of psychology department </span>
+            "Welcome to neorology at <strong>MadiCare-network</strong> ,
+            I LEAD OUR EXPERT PSYCHOLOGY TEAM, DEDICATED TO YOUR MENTAL AND EMOTIONAL WELL-BEING. WE'RE HERE TO PROVIDE
+            PERSONALIZED CARE, WHETHER FOR MENTAL HEALTH CONCERNS, THERAPEUTIC SUPPORT, OR SPECIALIZED PSYCHOLOGICAL
+            SERVICES.
+            IF YOU HAVE QUESTIONS OR NEED SUPPORT, PLEASE REACH OUT. YOUR MENTAL HEALTH IS OUR PRIORITY.</p>
+        <a onclick="toggleComplaintSuggestion()" href="{{ url_for('contact') }}" class="btn">complaint and
+            suggestion<span class="fas fa-chevron-right"></span></a>
+        <!-- <button onclick="toggleComplaintSuggestion()">Show Complaint/Suggestion</button> -->
+
+    </div>
+
+</section>
+
+<section class="doctor" id="doctor">
+    <h1 class="heading">expert<span>doctor's</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor23.jpg') }}">
+            <h3><span>Dr </span>James Smith</h3>
+            <h4>Specialization:<span> Cognitive Behavioral Therapy (CBT)</span></h4>
+            <p> Dr. James Smith specializes in Cognitive Behavioral Therapy, a highly effective approach for treating
+                anxiety, depression, and various mental health conditions.
+                His therapeutic techniques empower patients to make positive changes in their lives.</p>
+            <br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor5.png') }}">
+            <h3><span>Dr </span> Maria Rodriguez</h3>
+            <h4>Specialization:<span> Clinical Psychology</span></h4>
+            <p>Dr. Maria Rodriguez is a clinical psychologist with expertise in diagnosing and treating a wide range of
+                mental health disorders.
+                Her compassionate approach helps patients navigate their psychological challenges.</p>
+            <br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor3.png') }}">
+            <h3><span>Dr </span>Lisa Chen</h3>
+            <h4>Specialization:<span> Child and Adolescent Psychology</span></h4>
+
+            <p>Dr. Lisa Chen focuses on child and adolescent psychology, offering specialized care to young individuals
+                facing emotional and behavioral challenges.
+                Her compassionate and child-friendly approach creates a safe and supportive environment for children and
+                teens.
+            </p><br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor1.png') }}">
+            <h3><span>Dr </span>Emily Turner</h3>
+            <h4>Specialization:<span> Neuropsychology</span></h4>
+            <p>Dr. Emily Turner is a neuropsychologist who specializes in assessing and treating cognitive and
+                neurological disorders.
+                Her expertise
+                helps patients understand and manage conditions affecting their brain function, such as memory disorders
+                and brain injuries.<span class="fas fa-chevron-right"></span></a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}

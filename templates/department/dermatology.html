@@ -1,0 +1,89 @@
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/sub-dep.css') }}"> -->
+<style>
+  .contact p span {
+    color: var(--green) !important;
+  }
+
+  .home .image img {
+    width: 75% !important;
+    height: 69vh !important;
+  }
+</style>
+{% extends "layout.html" %}
+{% block body %}
+
+<section id="home" class="home">
+  <div class="image">
+    <img src="{{ url_for('static', filename='image/doctor9.png') }}">
+    <!-- <img src="{{ url_for('static', filename='image/home.png') }}"> -->
+  </div>
+  <div class="contact">
+    <h1 class="heading"><span>Doctor</span>zeeshan</h1>
+    <h3>head of the department</h3>
+    <p><span>a message from the head of dermatology department </span>
+      "Welcome to Dermatology at <strong>MadiCare-network</strong> ,
+      I lead our expert dermatology team, dedicated to your skin health. We're here to provide personalized care,
+      whether for skin concerns, treatments, or specialized care. If you have questions, please reach out.
+      Your skin is our priority.</p>
+    <a onclick="toggleComplaintSuggestion()" href="{{ url_for('contact') }}" class="btn">complaint and suggestion<span
+        class="fas fa-chevron-right"></span></a>
+    <!-- <button onclick="toggleComplaintSuggestion()">Show Complaint/Suggestion</button> -->
+
+  </div>
+
+</section>
+
+<section class="doctor" id="doctor">
+  <h1 class="heading">expert<span>doctor's</span></h1>
+  <div class="box-container">
+    <div class="box">
+      <img src="{{ url_for('static', filename='image/doctor13.png') }}">
+      <h3><span>Dr </span>Sophia Mitchell</h3>
+      <h4>Specialization:<span> General Dermatology</span></h4>
+      <p> Dr. Sophia Mitchell is a renowned general dermatologist known for her expertise in diagnosing and treating
+        a wide range of skin conditions,
+        from acne to eczema. Patients appreciate her compassionate approach and commitment to healthy skin.</p><br>
+      <a href="{{ url_for('booking') }}" class="btn">click appointment<span class="fas fa-chevron-right"></span></a>
+    </div>
+
+    <div class="box">
+      <img src="{{ url_for('static', filename='image/doctor12.png') }}">
+      <h3><span>Dr </span> David Wilson</h3>
+      <h4>Specialization:<span> Dermatopathology</span></h4>
+      <p> Dr. David Wilson specializes in dermatopathology, focusing on the microscopic examination of skin samples to
+        diagnose
+        complex skin conditions and diseases. His precise diagnoses are essential for effective treatment.</p><br>
+      <a href="{{ url_for('booking') }}" class="btn">click appointment<span class="fas fa-chevron-right"></span></a>
+    </div>
+
+    <div class="box">
+      <img src="{{ url_for('static', filename='image/doctor11.png') }}">
+      <h3><span>Dr </span>Michael Lee</h3>
+      <h4>Specialization:<span> Cosmetic Dermatology</span></h4>
+
+      <p>Dr. Michael Lee is an expert in cosmetic dermatology, specializing in various non-invasive and minimally
+        invasive procedures to enhance the appearance of the
+        skin. His skill in administering Botox, fillers, and laser treatments has made him a sought-after practitioner.
+      </p><br>
+      <a href="{{ url_for('booking') }}" class="btn">click appointment<span class="fas fa-chevron-right"></span></a>
+    </div>
+
+    <div class="box">
+      <img src="{{ url_for('static', filename='image/doctor14.png') }}">
+      <h3><span>Dr </span>Lisa Patel</h3>
+      <h4>Specialization:<span> Pediatric Dermatology</span></h4>
+      <p>Dr. Lisa Patel is a dedicated pediatric dermatologist with a passion for caring for the unique skin needs of
+        children. Her gentle approach and extensive knowledge
+        make her a trusted choice for parents seeking skin care solutions for their little ones.</p>
+      <a href="{{ url_for('booking') }}" class="btn">click appointment<span class="fas fa-chevron-right"></span></a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}

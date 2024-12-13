@@ -1,0 +1,91 @@
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/sub-dep.css') }}"> -->
+<style>
+    .contact p span {
+        color: var(--green) !important;
+    }
+
+    .home .image img {
+        width: 75% !important;
+        height: 69vh !important;
+    }
+</style>
+{% extends "layout.html" %}
+{% block body %}
+
+<section id="home" class="home">
+    <div class="image">
+        <img src="{{ url_for('static', filename='image/doctor10.png') }}">
+        <!-- <img src="{{ url_for('static', filename='image/home.png') }}"> -->
+    </div>
+    <div class="contact">
+        <h1 class="heading"><span>Dr</span> zohain ali</h1>
+        <h3>head of the department</h3>
+        <p><span>a message from the head of nephrology department </span>
+            "Welcome to nephrology at <strong>MadiCare-network</strong> ,
+            I lead our expert nephrology team, dedicated to your kidney health. We're here to provide personalized care, 
+            whether for kidney concerns, 
+            treatments, or specialized care. If you have questions, please reach out. Your kidney health is our priority.</p>
+        <a onclick="toggleComplaintSuggestion()" href="{{ url_for('contact') }}" class="btn">complaint and
+            suggestion<span class="fas fa-chevron-right"></span></a>
+        <!-- <button onclick="toggleComplaintSuggestion()">Show Complaint/Suggestion</button> -->
+
+    </div>
+
+</section>
+
+<section class="doctor" id="doctor">
+    <h1 class="heading">expert<span>doctor's</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor13.png') }}">
+            <h3><span>Dr </span>sonia shah</h3>
+            <h4>Specialization:<span> Chronic Kidney Disease Management</span></h4>
+            <p> Dr. sonia shah specializes in the comprehensive management of chronic kidney disease. 
+                Her expertise ensures that patients receive tailored care and support to effectively manage this condition.</p>
+            <br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor19.png') }}">
+            <h3><span>Dr </span> zoni khan</h3>
+            <h4>Specialization:<span> Kidney Transplantation</span></h4>
+            <p> Dr. zoni khan is an expert in kidney transplantation, dedicated to helping patients through the transplant process. 
+                Her experience and precision are essential for successful kidney transplant procedures.</p>
+            <br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor20.png') }}">
+            <h3><span>Dr </span> sania ali</h3>
+            <h4>Specialization:<span> Hypertension and Renal Disorders</span></h4>
+
+            <p>Dr.  sania ali focus lies in the management of hypertension and various renal disorders.
+                 Her comprehensive approach to treatment benefits patients with these conditions.
+            </p><br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor21.jpg') }}">
+            <h3><span>Dr </span>annie</h3>
+            <h4>Specialization:<span> Pediatric Nephrology</span></h4>
+            <p>Dr. annie specializes in pediatric nephrology, focusing on the unique needs of children with kidney-related issues. 
+                Her compassionate care and expertise make her an invaluable resource for young patients and their families.</p>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}

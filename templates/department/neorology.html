@@ -1,0 +1,91 @@
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/sub-dep.css') }}"> -->
+<style>
+    .contact p span {
+        color: var(--green) !important;
+    }
+
+    .home .image img {
+        width: 75% !important;
+        height: 69vh !important;
+    }
+</style>
+{% extends "layout.html" %}
+{% block body %}
+
+<section id="home" class="home">
+    <div class="image">
+        <img src="{{ url_for('static', filename='image/doctor17.png') }}">
+        <!-- <img src="{{ url_for('static', filename='image/home.png') }}"> -->
+    </div>
+    <div class="contact">
+        <h1 class="heading"><span>Dr</span> sofia khan</h1>
+        <h3>head of the department</h3>
+        <p><span>a message from the head of neorology department </span>
+            "Welcome to neorology at <strong>MadiCare-network</strong> ,
+            I lead our expert neurology team, dedicated to your neurological well-being. We're here to provide
+            personalized care, whether for neurological concerns, treatments,
+            or specialized care. If you have questions, please reach out. Your neurological health is our priority.</p>
+        <a onclick="toggleComplaintSuggestion()" href="{{ url_for('contact') }}" class="btn">complaint and
+            suggestion<span class="fas fa-chevron-right"></span></a>
+        <!-- <button onclick="toggleComplaintSuggestion()">Show Complaint/Suggestion</button> -->
+
+    </div>
+
+</section>
+
+<section class="doctor" id="doctor">
+    <h1 class="heading">expert<span>doctor's</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor10.png') }}">
+            <h3><span>Dr </span>zohan ali</h3>
+            <h4>Specialization:<span> Epilepsy and Seizure Disorders</span></h4>
+            <p> Dr. zohan ali specializes in the diagnosis and treatment of epilepsy and various seizure disorders.
+                 His expertise in managing neurological conditions helps patients regain control of their lives.</p>
+            <br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor15.png') }}">
+            <h3><span>Dr </span> jhon selman</h3>
+            <h4>Specialization:<span> Movement Disorders</span></h4>
+            <p> Dr. jhon selman  is an expert in movement disorders, such as Parkinson's disease and essential tremor. 
+                His dedication to improving the quality of life for patients with these conditions is widely recognized.</p>
+            <br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor16.png') }}">
+            <h3><span>Dr </span>anila shah</h3>
+            <h4>Specialization:<span> Pediatric Neurology</span></h4>
+
+            <p>Dr. anila shah focuses on the management of headaches and migraines, 
+                providing effective treatments and relief to patients experiencing chronic and debilitating headaches.
+            </p><br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor18.png') }}">
+            <h3><span>Dr </span>zohaib afridi</h3>
+            <h4>Specialization:<span> Headache and Migraine Management</span></h4>
+            <p>Dr. zohaib afridi  specializes in pediatric neurology, offering specialized care for children with neurological conditions. 
+                His compassionate approach and expertise are invaluable in addressing the unique needs of young patients and their families.</p>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}

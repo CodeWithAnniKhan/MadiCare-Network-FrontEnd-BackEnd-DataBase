@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block body %}
+<!--  about section start here  -->
+
+
+<section id="about" class="about">
+    <h1 class="heading"><span>about</span> us</h1>
+  
+    <div class="row">
+  
+      <div class="image">
+        <img src="{{ url_for('static', filename='image/about.png') }}">
+        <!-- <img src="/image/about.png" alt=""> -->
+        <!-- <img src="image/about.png" alt=""> -->
+      </div>
+  
+      <div class="contact">
+        <h3>we are take care of your healthy life</h3>
+        <p>Imagine a platform where you can effortlessly explore and choose from a diverse range of expert doctors across
+          various hospital
+          departments. Whether you seek a compassionate pediatrician, a cutting-edge neurologist,
+          or a skilled surgeon, Madicare Network empowers you to make decisions aligned with your health needs and
+          preferences.</p>
+        <p id="pera" style="display: none;">Gone are the days of uncertainty and confusion. Our intuitive interface and
+          detailed doctor profiles provide you with a
+          comprehensive view of each specialist's expertise, experience, and patient reviews. This transparency ensures
+          that you're not just selecting a doctor
+          you're finding the perfect partner on your health journey.
+          Your well-being deserves the best, and with Madicare Network, you're stepping into a realm where choosing a
+          doctor is an experience of empowerment.
+          Join us in revolutionizing healthcare choices
+          because the path to better health should always be in your hands.</p>
+        <a id="btn" class="btn" onclick="toggleHide()">learn-more<span class="fas fa-chevron-right"></span></a>
+      </div>
+    </div>
+  
+  
+    </div>
+  </section>
+  
+  
+   
+  {% endblock %}
+  <!--  about section end here  -->

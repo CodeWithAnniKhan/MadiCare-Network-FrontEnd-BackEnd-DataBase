@@ -1,0 +1,91 @@
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/sub-dep.css') }}"> -->
+<style>
+    .contact p span {
+        color: var(--green) !important;
+    }
+
+    .home .image img {
+        width: 75% !important;
+        height: 69vh !important;
+    }
+</style>
+{% extends "layout.html" %}
+{% block body %}
+
+<section id="home" class="home">
+    <div class="image">
+        <img src="{{ url_for('static', filename='image/doctor12.png') }}">
+        <!-- <img src="{{ url_for('static', filename='image/home.png') }}"> -->
+    </div>
+    <div class="contact">
+        <h1 class="heading"><span>Dr</span> zohan ali</h1>
+        <h3>head of the department</h3>
+        <p><span>a message from the head of orthopad </span>
+            "Welcome to orthopad at <strong>MadiCare-network</strong> ,
+            I LEAD OUR EXPERT ORTHOPEDIC TEAM, DEDICATED TO YOUR MUSCULOSKELETAL HEALTH. WE'RE HERE TO PROVIDE PERSONALIZED CARE,
+             WHETHER FOR JOINT AND MUSCLE CONCERNS, SURGICAL INTERVENTIONS, OR SPECIALIZED TREATMENTS. IF YOU HAVE QUESTIONS, PLEASE REACH OUT. 
+            YOUR MOBILITY AND COMFORT ARE OUR PRIORITY.</p>
+        <a onclick="toggleComplaintSuggestion()" href="{{ url_for('contact') }}" class="btn">complaint and
+            suggestion<span class="fas fa-chevron-right"></span></a>
+        <!-- <button onclick="toggleComplaintSuggestion()">Show Complaint/Suggestion</button> -->
+
+    </div>
+
+</section>
+
+<section class="doctor" id="doctor">
+    <h1 class="heading">expert<span>doctor's</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor14.png') }}">
+            <h3><span>Dr </span>Maria Rodriguez</h3>
+            <h4>Specialization:<span> Sports Medicine</span></h4>
+            <p> Dr. Maria Rodriguez is a specialist in sports medicine, focusing on the diagnosis and treatment of sports-related injuries. 
+                Her expertise helps athletes of all levels recover and return to their peak performance.</p>
+            <br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor15.png') }}">
+            <h3><span>Dr </span> James Smith</h3>
+            <h4>Specialization:<span>  Joint Replacement Surgery</span></h4>
+            <p> Dr. James Smith is an expert in joint replacement surgery, particularly for hips and knees. 
+                His surgical skill and commitment to improving patients' mobility have made him a trusted choice for joint-related issues.</p>
+            <br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor16.png') }}">
+            <h3><span>Dr </span>Lisa Chen</h3>
+            <h4>Specialization:<span>  Spine Surgery</span></h4>
+
+            <p>Dr. Lisa Chen specializes in spine surgery, offering advanced treatments for conditions like herniated discs and spinal deformities.
+                 Her surgical precision and dedication to spine health benefit patients seeking relief from back problems
+            </p><br>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/doctor20.png') }}">
+            <h3><span>Dr </span>Emily Turner</h3>
+            <h4>Specialization:<span> Pediatric Orthopedics</span></h4>
+            <p>Dr. Emily Turner is a pediatric orthopedic specialist, providing specialized care for children with musculoskeletal conditions. 
+                Her compassionate approach and expertise ensure young patients receive the best possible orthopedic care.</p>
+            <a href="{{ url_for('booking') }}" class="btn">click appointment<span
+                    class="fas fa-chevron-right"></span></a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}
